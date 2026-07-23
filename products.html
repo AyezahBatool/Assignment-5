@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Artisanal Products & Specialty Beans — VÉLOUR ROASTERS</title>
+  <meta name="description" content="Browse our single-origin coffee beans, signature beverages, fresh pastries, and pro brewing gear.">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="header-nav">
+    <nav class="nav-island">
+      <a href="index.html" class="brand-logo">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.172l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"></path>
+        </svg>
+        <span>VÉLOUR</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="products.html" class="nav-link active">Products</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="cart-trigger" aria-label="Shopping Bag">
+          <svg style="width: 20px; height: 20px;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+          </svg>
+          <span class="cart-count">0</span>
+        </button>
+        <div class="hamburger" id="hamburgerBtn" aria-label="Toggle Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <div class="mobile-nav-drawer" id="mobileDrawer">
+    <ul class="mobile-nav-links">
+      <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+      <li><a href="products.html" class="mobile-nav-link active">Products</a></li>
+      <li><a href="about.html" class="mobile-nav-link">About Us</a></li>
+      <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+    </ul>
+  </div>
+  <section class="section-padding" style="padding-top: 10rem; padding-bottom: 2.5rem;">
+    <div class="container">
+      <div style="max-width: 680px;">
+        <span class="eyebrow">Handcrafted Catalog</span>
+        <h1 class="section-title">The Coffee Collection</h1>
+        <p class="section-desc">Explore our full line of single-origin micro-lots, barista beverages, daily artisan pastries, and precision espresso gear.</p>
+      </div>
+    </div>
+  </section>
+  <section style="padding-bottom: 7rem;">
+    <div class="container">
+      <div class="filter-bar-container">
+        <div class="filter-tabs">
+          <button class="filter-tab active" data-category="all">All Products</button>
+          <button class="filter-tab" data-category="beans">Single-Origin Beans</button>
+          <button class="filter-tab" data-category="drinks">Signature Drinks</button>
+          <button class="filter-tab" data-category="bakery">Artisanal Bakery</button>
+          <button class="filter-tab" data-category="gear">Brewing Gear</button>
+        </div>
+        <div class="search-box">
+          <svg class="search-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+          </svg>
+          <input type="text" id="productSearchInput" class="search-input" placeholder="Search products, origin, notes...">
+        </div>
+      </div>
+      <div class="product-grid" id="productsContainer">
+      </div>
+    </div>
+  </section>
+  <div class="modal-backdrop" id="quickViewModal">
+    <div class="modal-box">
+      <button class="modal-close" aria-label="Close modal">✕</button>
+      <div id="modalContentContainer"></div>
+    </div>
+  </div>
+  <div class="cart-drawer-backdrop" id="cartBackdrop"></div>
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h3 style="font-size: 1.25rem;">Your Shopping Bag</h3>
+      <button class="cart-close" style="font-size: 1.2rem; cursor: pointer;">✕</button>
+    </div>
+    <div class="cart-body"></div>
+    <div class="cart-footer">
+      <div class="cart-total-row">
+        <span>Subtotal</span>
+        <span class="cart-total-val">$0.00</span>
+      </div>
+      <button class="btn-primary" style="width: 100%; justify-content: center;" onclick="alert('Checkout process initiated!')">
+        <span>Proceed to Checkout</span>
+      </button>
+    </div>
+  </aside>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand-logo">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width:24px; height:24px; color:var(--accent-gold);">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.172l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"></path>
+            </svg>
+            <span>VÉLOUR ROASTERS</span>
+          </div>
+          <p>Artisanal coffee roastery dedicated to single-origin micro-lots, sustainable direct sourcing, and sensory coffee culture.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products Shop</a></li>
+            <li><a href="about.html">About Story</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Categories</h4>
+          <ul class="footer-links">
+            <li><a href="products.html">Single-Origin Beans</a></li>
+            <li><a href="products.html">Signature Drinks</a></li>
+            <li><a href="products.html">Artisanal Bakery</a></li>
+            <li><a href="products.html">Brewing Gear</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Roastery Hours</h4>
+          <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.8;">
+            Mon – Fri: 7:00 AM – 7:00 PM<br>
+            Sat – Sun: 8:00 AM – 8:00 PM<br>
+            <span style="color: var(--accent-gold);">450 Grand Avenue, NY</span>
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 VÉLOUR ROASTERS. All rights reserved.</div>
+        <div style="display: flex; gap: 1.5rem;">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="js/products-data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/products.js"></script>
+</body>
+</html>
